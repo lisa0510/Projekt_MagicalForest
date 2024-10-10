@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lisa</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="start.css" />  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">  
+    <style>
+      /* Ensure body takes full height and remove margin */
+      body, html {
+        margin: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Pixelify Sans', sans-serif;
+        background: #111;
+      }
+
+      /* Styling the button */
+      .welcome-button {
+        background-color: darkolivegreen; /* Purple color */
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        font-family: "Pixelify Sans", sans-serif;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Button hover effect */
+      .welcome-button:hover {
+        background-color: darkslategray; /* Darker purple */
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Centered Welcome Button -->
+    <button class="welcome-button" onclick="window.location.href='start.html';">Start Adventure</button>
+
+  </body>
+</html>

@@ -12,7 +12,12 @@
 
 function playAudio() {
   var audio = new Audio('audio/g2.wav');
-  audio.play().catch(error => {
+  audio.muted = true; // Start muted to bypass autoplay restrictions
+  audio.play().then(() => {
+    setTimeout(() => {
+      audio.muted = false; // Unmute after 1 second
+    }, 1000); // Adjust delay as necessary
+  }).catch(error => {
     console.log('Audio playback failed:', error);
   });
 }
