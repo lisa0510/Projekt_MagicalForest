@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #111;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  .text-wrapper{
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+  }
+  .center {
+    position: absolute;
+    margin-left: 40%;
+    width: 50%;
+    padding: 10px;
+    display: none;
+  }
+
+  .text {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: medium;
+    color: aliceblue;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    animation: typing;
+    animation-duration: 2.5s;
+    animation-timing-function: steps(50, end);
+    animation-fill-mode: forwards;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  #button{
+    display: none;
+    outline: 0;
+    cursor: pointer;
+    border: none;
+    height: 35px;
+    width: 75px;
+    position: absolute;
+    left: 90vw;
+    top: 90vh;
+    background-color: darkmagenta;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    box-shadow: 0 4px 14px 0 white(0 118 255 / 39%);
+    animation: pulseShadow 2s infinite;
+    
+  }
+
+  #button:hover{
+    background-color: pink;
+  }
+
+
+  
+  @keyframes pulseShadow {
+    0% {
+      box-shadow: 0 0 10px 5px rgba(255, 147, 147, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 10px 5px rgba(255, 240, 122, 0.5);
+    }
+  }
+
+  .star {
+    position: absolute;
+    top: -20px;
+    color: white;
+    animation: animate 5s linear forwards;
+  
+  }
+  
+  .star::before {
+    content: "\f005";
+    font-family: FontAwesome;
+    text-shadow: 0 0 5px darkmagenta, 0 0 20px darkblue, 0 0 50px #110111;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+  
+    80% {
+      opacity: 1;
+    }
+  
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .star {
+      font-size: 8px;
+    }
+  }
+  
+
+#deer {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    top: 200px;
+    width: 100px;
+    height: 100px;
+    align-self: auto;
+    position: relative;
+    animation: mymove 12s infinite;
+    animation-timing-function: linear;
+
+  }
+ 
+
+  @keyframes mymove {
+    from {left: -30px;}
+    to {left: 1500px;}
+    0%    {transform: rotate(-0deg)}
+    25% {transform: rotate(-90deg)}
+    50% {transform: rotate(-180deg)}
+    75% {transform: rotate(-270deg)}
+    100% {transform: rotate(-360deg)}
+  }
+
+  #bunny {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    top: 200px;
+    width: 100px;
+    height: 100px;
+    align-self: auto;
+    position: relative;
+    animation: mymove 15s infinite;
+    animation-timing-function: linear;
+  }
+ 
+
+  @keyframes mymove {
+    from {left: -10px;}
+    to {left: 1500px;}
+    0%    {transform: rotate(-0deg)}
+    25% {transform: rotate(-90deg)}
+    50% {transform: rotate(-180deg)}
+    75% {transform: rotate(-270deg)}
+    100% {transform: rotate(-360deg)}
+  }
+
+  #witch {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    top: 200px;
+    width: 100px;
+    height: 100px;
+    align-self: auto;
+    position: relative;
+    animation: mymove 17s infinite;
+    animation-timing-function: linear;
+  }
+ 
+
+  @keyframes mymove {
+    from {left: -40px;}
+    to {left: 1500px;}
+    0%    {transform: rotate(-0deg)}
+    25% {transform: rotate(-90deg)}
+    50% {transform: rotate(-180deg)}
+    75% {transform: rotate(-270deg)}
+    100% {transform: rotate(-360deg)}
+  }

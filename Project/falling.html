@@ -1,0 +1,76 @@
+
+</head>
+
+ 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="falling.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Effekt</title>
+        </head>
+      
+      <body>
+        <img src="img/badbunny.png" id="bunny">
+        <img src="img/baddeer.png" id="deer">
+        <img src="img/witch.png" id="witch">
+        <audio src="audio/power-up-35839.mp3"  autoplay></audio>.
+
+        <div class="center" id="myDiv">
+          <p class="text">the curse has been lifted...</p>
+        </div>
+
+       <button id="button"  onclick="window.location.href='end.html';">End</button>
+      </body>
+      <audio id="audio" src="audio/typing-sound-effect-117679.mp3"></audio>
+
+<script>
+function stars() {
+  let e = document.createElement("div");
+  e.setAttribute("class", "star");
+  document.body.appendChild(e);
+  e.style.left = Math.random() * +innerWidth + "px";
+
+  let size = Math.random() * 12;
+  let duration = Math.random() * 3;
+
+  e.style.fontSize = 12 + "px";
+  e.style.animationDuration = 2 + duration + "s";
+  setTimeout(function () {
+    document.body.removeChild(e);
+  }, 5000);
+}
+
+setInterval(function () {
+  stars();
+}, 50);
+
+
+  // Wait for the document to be fully loaded
+  document.addEventListener("DOMContentLoaded", function() {
+    
+    function showDiv() {
+        document.getElementById("myDiv").style.display = "block";
+
+    }
+    function showButton() {
+        document.getElementById("button").style.display = "block";
+    }
+   
+   
+    setTimeout(showButton, 6500);
+    setTimeout(showDiv, 4500);
+    var audio = document.getElementById("audio");
+    setTimeout(function() {
+        audio.play();
+    }, 3000);
+
+
+   
+});
+
+
+</script>

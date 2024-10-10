@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lisa</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <!-- Script -->
+    <script src="player.js" defer></script>
+    <script src="npc.js" defer></script>
+       
+  </head>
+  <body>
+ 
+    
+    <div id="viewport">
+      <div id="playfield">
+          
+           
+            <img id="wand" onclick="window.location.href='confetti.html';" src="img/wand.png">
+
+            <img src="img/badbunny.png" alt="Open Modal 1" id="bunny" class="open-modal-img">
+            <img src="img/baddeer.png" alt="Open Modal 2" id="deer" class="open-modal-img">
+            <img src="img/witch.png" alt="Open Modal 3" id="witch" cla ss="open-modal-img">
+
+              <div class="modal-overlay hide" id="bunnymodal">
+                <div class="modal-wrapper">
+                  <div class="close-btn-wrapper">
+                    <button class="close-modal-btn">
+                      Close
+                    </button>
+                  </div>
+                  <div class="modal-content">
+                   <p>Greetings from Api the Bunny</p> 
+                    <br>
+                    Save the forest from the witch's curse!
+                    I think the Spell has something to do with Digital Ideation.. Maybe a short version?
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-overlay hide" id="deermodal">
+                <div class="modal-wrapper">
+                  <div class="close-btn-wrapper">
+                    <button class="close-modal-btn">
+                      Close
+                    </button>
+                  </div>
+                  <div class="modal-content">
+                   <p>Greetings from Marin the Hirschi</p> 
+                    <br>
+                    Are you here to save us? You need the spell...
+                    Ugh the spell... I cant remember it! Maybe Api knows something?
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-overlay hide" id="witchmodal">
+                <div class="modal-wrapper">
+                  <div class="close-btn-wrapper">
+                    <button class="close-modal-btn">
+                      Close
+                    </button>
+                  </div>
+                  <div class="modal-content">
+                   <p>The Evil Witch:</p> 
+                    <br>
+                    You cant break the spell! You are doomed! You cant find the wand nor the spell! Hahahah...
+                  </div>
+                </div>
+              </div>
+
+            <div id="player">
+                  <div id="player-skin" class="stay-down"></div>
+                  <div id="playfieldHouse"></div>
+          </div>
+      </div>
+
+      <div id="info">Move with W A S D</div>
+  </div>
+
+  <audio src="audio/map.wav" autoplay loop ></audio>
+
+  </body>
+</html>

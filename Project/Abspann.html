@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+   
+    <title>Abspann</title>
+    <style> 
+    body {
+    margin: 0;
+    padding: 0;
+    background:  rgb(30,30,30);
+    color: white;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: medium;
+    overflow: hidden; /* Verhindert Scrollen */
+}
+
+.credits-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.credits {
+    width: 80%;
+    text-align: center;
+    animation: scrollCredits 30s linear infinite;
+}
+
+@keyframes scrollCredits {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+</style>
+</head>
+<body>
+    <div class="credits-container">
+        <div class="credits">
+            <h1>The Magical Forest Adventure</h1>
+            <h2>Developer and Design:</h2>
+            <p>Lisa Landolt</p>
+            <h2>A big thanks goes to:</h2>
+            <h3>Voice Actor</h2>
+            <p>Bunny: Apisana</p>
+            <p>Stag (Deer): Marin</p>
+            <p>Old Grandpa: Lukas</p>
+            <p>Witch: Marco</p>
+            <br>
+            <br>
+            <br>
+            <p>Digital Ideation DeWeb Projekt</p>
+            <p>2.Semester 2024</p>
+        </div>
+      
+    </div>
+
+    <audio id="audio" src="audio/end.mp3" autoplay loop></audio>
+  
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+const credits = document.querySelector('.credits');
+const duration = 20; // Dauer der Animation in Sekunden
+
+// Beispiel für eine Pause-Funktion
+credits.addEventListener('click', () => {
+    if (credits.style.animationPlayState === 'paused') {
+        credits.style.animationPlayState = 'running';
+    } else {
+        credits.style.animationPlayState = 'paused';
+    }
+});
+});
+
+
+
+</script>
+</html>
