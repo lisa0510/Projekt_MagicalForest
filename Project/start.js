@@ -11,6 +11,12 @@
 
 
 function playAudio() {
-  var audio = document.getElementById("backgroundAudio");
-  audio.play(); // Play audio when button is clicked
+  var audio = new Audio('audio/g2.wav');
+  audio.play().catch(error => {
+    console.log('Audio playback failed:', error);
+  });
 }
+
+window.onload = function() {
+  playAudio(); // Attempt to play audio when the page loads
+};
